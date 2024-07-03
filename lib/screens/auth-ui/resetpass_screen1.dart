@@ -57,7 +57,7 @@ class ResetpassScreen1 extends StatelessWidget {
                     alignment: Alignment.topLeft,
                     child: FormHedingText(text: "Email")),
                 SizedBox(
-                  height: size.height * .04,
+                  height: size.height * .02,
                 ),
                 CustomTextFormField(
                   hintText: "Enter Email",
