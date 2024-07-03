@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:full_ecommerce/screens/auth-ui/creat_account.dart';
 import 'package:full_ecommerce/screens/auth-ui/resetpass_screen1.dart';
 import 'package:full_ecommerce/widgets/custom_auth_button.dart';
 import 'package:full_ecommerce/widgets/form_heading_text.dart';
@@ -7,8 +8,8 @@ import 'package:full_ecommerce/widgets/textformfield.dart';
 import 'package:get/get.dart';
 
 // ignore: must_be_immutable
-class WelcomeScreen extends StatelessWidget {
-  WelcomeScreen({super.key});
+class SignInScreen extends StatelessWidget {
+  SignInScreen({super.key});
 
   TextEditingController emailController = TextEditingController();
   TextEditingController passController = TextEditingController();
@@ -120,29 +121,36 @@ class WelcomeScreen extends StatelessWidget {
                   SizedBox(
                     height: size.height * .2,
                   ),
-                  RichText(
-                      text: const TextSpan(children: [
-                    TextSpan(
-                      text: "Don’t have an account?",
-                      style: TextStyle(
-                        color: Color(0xFFAAAAAA),
-                        fontSize: 14,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w600,
-                        height: 0,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Don’t have an account?",
+                        style: TextStyle(
+                          color: const Color(0xFFAAAAAA),
+                          fontSize: 14.sp,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w600,
+                          height: 0,
+                        ),
                       ),
-                    ),
-                    TextSpan(
-                      text: "sign up",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 14,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w500,
-                        height: 0,
+                      InkWell(
+                        onTap: () {
+                          Get.to(CreatAccountScreen());
+                        },
+                        child: Text(
+                          "Sign Up",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 14.sp,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w500,
+                            height: 0,
+                          ),
+                        ),
                       ),
-                    )
-                  ]))
+                    ],
+                  )
                 ],
               ),
             ),
