@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:full_ecommerce/screens/user-panel/main_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:full_ecommerce/screens/auth-ui/signin_screen.dart';
 import 'package:get/get.dart';
-import 'package:lottie/lottie.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -16,8 +16,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 5), () {
-      Get.offAll(() => const MainScreen());
+    Timer(const Duration(seconds: 3), () {
+      Get.offAll(() => WelcomeScreen());
     });
   }
 
@@ -31,22 +31,19 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
       body: SizedBox(
         width: Get.width,
-        child: Column(
-          children: [
-            Expanded(
-              child: SizedBox(
-                width: Get.width,
-                child: Lottie.asset("assets/splash-screen.json"),
-              ),
-            ),
-            const Padding(
-              padding: EdgeInsets.only(bottom: 8),
-              child: Text(
-                "loading...",
-                style: TextStyle(fontSize: 20, color: Colors.black),
-              ),
-            ),
-          ],
+        child: Center(
+        
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset("assets/images/splash_icon.png",height: 80,width: 80,),
+              SizedBox(height: 10.h,),
+              Image.asset("assets/images/splash2_icon.png",height: 80,),
+              SizedBox(height: 10.h,),
+              Text("Venture Together",style: TextStyle(fontSize: 23.sp,color:const Color(0xFF3A5DBA),letterSpacing: 2),)
+            ],
+          ),
         ),
       ),
     );
