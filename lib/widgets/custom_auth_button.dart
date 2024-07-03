@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 
 class CustomAuthButton extends StatelessWidget {
   final String text;
-  final VoidCallback onPressed;
+  final VoidCallback ontap;
 
   const CustomAuthButton({
     super.key,
     required this.text,
-    required this.onPressed,
+    required this.ontap,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onPressed,
+      onTap: ontap,
       child: Container(
         width: 320,
         height: 54,

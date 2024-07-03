@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:full_ecommerce/screens/auth-ui/resetpass_screen.dart';
+import 'package:full_ecommerce/screens/auth-ui/resetpass_screen1.dart';
 import 'package:full_ecommerce/widgets/custom_auth_button.dart';
 import 'package:full_ecommerce/widgets/form_heading_text.dart';
 import 'package:full_ecommerce/widgets/textformfield.dart';
@@ -89,23 +89,23 @@ class WelcomeScreen extends StatelessWidget {
                           prefixIcon: const Icon(Icons.email),
                         ),
                         SizedBox(
-                          height: size.height * .02,
-                        ),
-                        SizedBox(
                           width: size.width,
-                          child: InkWell(
-                            onTap: () {
-                              Get.to(const ResetpassScreen());
-                            },
-                            child: Text(
-                              'Reset Password?',
-                              textAlign: TextAlign.end,
-                              style: TextStyle(
-                                color: const Color(0xFF8F9098),
-                                fontSize: 12.sp,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w500,
-                                height: 0.14.h,
+                          child: Align(
+                            alignment: Alignment.bottomRight,
+                            child: TextButton(
+                              onPressed: () {
+                                Get.to(ResetpassScreen1());
+                              },
+                              child: Text(
+                                'Reset Password?',
+                                textAlign: TextAlign.end,
+                                style: TextStyle(
+                                  color: const Color(0xFF8F9098),
+                                  fontSize: 12.sp,
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.w500,
+                                  height: 0.14.h,
+                                ),
                               ),
                             ),
                           ),
@@ -114,9 +114,9 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: size.height * .08,
+                    height: size.height * .06,
                   ),
-                  CustomAuthButton(text: "SignIn", onPressed: () {}),
+                  CustomAuthButton(text: "SignIn", ontap: () {}),
                   SizedBox(
                     height: size.height * .2,
                   ),
