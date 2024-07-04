@@ -50,7 +50,7 @@ class SignInScreen extends StatelessWidget {
                         height: 0,
                       )),
                   Text(
-                    'Hi! Welcome back, You\\’ve been missed',
+                    'Hi! Welcome back, You\'ve been missed',
                     style: TextStyle(
                       color: const Color(0xFF8A8A8A),
                       fontSize: 13.sp,
