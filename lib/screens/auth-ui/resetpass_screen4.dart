@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:full_ecommerce/screens/navigation_page/home_screen.dart';
+import 'package:full_ecommerce/screens/navigation_page/navigation.dart';
 import 'package:full_ecommerce/widgets/custom_auth_button.dart';
+import 'package:get/get.dart';
 
 // ignore: must_be_immutable
 class ResetpassScreen4 extends StatelessWidget {
@@ -64,6 +67,7 @@ class ResetpassScreen4 extends StatelessWidget {
                 CustomAuthButton(
                     text: "Done",
                     ontap: () {
+                      Get.to(NavigationBarPage());
                     }),
               ],
             ),

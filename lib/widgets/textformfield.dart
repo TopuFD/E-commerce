@@ -23,6 +23,7 @@ class CustomTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Container(
       decoration: ShapeDecoration(
         color: Colors.white,
@@ -36,18 +37,21 @@ class CustomTextFormField extends StatelessWidget {
           )
         ],
       ),
-      child: TextFormField(
-      controller: controller,
-      validator: validator,
-      keyboardType: keyboardType,
-      obscureText: obscureText,
-      decoration: InputDecoration(
-        border: InputBorder.none,
-        hintText: hintText,
-        prefixIcon: prefixIcon,
-        suffixIcon: suffixIcon,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: size.width * .01),
+        child: TextFormField(
+        controller: controller,
+        validator: validator,
+        keyboardType: keyboardType,
+        obscureText: obscureText,
+        decoration: InputDecoration(
+          border: InputBorder.none,
+          hintText: hintText,
+          prefixIcon: prefixIcon,
+          suffixIcon: suffixIcon,
+        ),
+            ),
       ),
-    ),
     );
     
   }

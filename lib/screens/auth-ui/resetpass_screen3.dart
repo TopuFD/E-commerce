@@ -10,7 +10,8 @@ import 'package:get/get.dart';
 class ResetpassScreen3 extends StatelessWidget {
   ResetpassScreen3({super.key});
 
-  TextEditingController emailController = TextEditingController();
+  TextEditingController newpassController = TextEditingController();
+  TextEditingController compassController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -18,12 +19,12 @@ class ResetpassScreen3 extends StatelessWidget {
       appBar: AppBar(),
       body: Center(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: size.width * .05),
+          padding: EdgeInsets.symmetric(horizontal: size.width * .05,vertical: size.height * .02),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset("assets/images/resetpass3.png"),
+                Image.asset("assets/images/resetpass3.png",height: size.height / 5,),
                 SizedBox(
                   height: size.height * .04,
                 ),
@@ -74,7 +75,7 @@ class ResetpassScreen3 extends StatelessWidget {
                 ),
                 CustomTextFormField(
                   hintText: "New Password",
-                  controller: emailController,
+                  controller: newpassController,
                   prefixIcon: const Icon(Icons.email),
                   suffixIcon: const Icon(Icons.remove_red_eye),
                 ),
@@ -89,12 +90,12 @@ class ResetpassScreen3 extends StatelessWidget {
                 ),
                 CustomTextFormField(
                   hintText: "Confirm New Password",
-                  controller: emailController,
+                  controller: compassController,
                   prefixIcon: const Icon(Icons.email),
                   suffixIcon: const Icon(Icons.remove_red_eye),
                 ),
                 SizedBox(
-                  height: size.height / 6,
+                  height: size.height / 8,
                 ),
                 CustomAuthButton(
                     text: "Continue",

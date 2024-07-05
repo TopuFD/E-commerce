@@ -18,7 +18,7 @@ class ResetpassScreen1 extends StatelessWidget {
       appBar: AppBar(),
       body: Center(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: size.width * .05),
+          padding: EdgeInsets.symmetric(horizontal: size.width * .05,vertical:size.height * .02),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -65,7 +65,7 @@ class ResetpassScreen1 extends StatelessWidget {
                   prefixIcon: const Icon(Icons.email),
                 ),
                 SizedBox(
-                  height: size.height / 4,
+                  height: size.height / 5,
                 ),
                 CustomAuthButton(
                     text: "Continue",

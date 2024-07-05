@@ -7,9 +7,9 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 
 // ignore: must_be_immutable
 class ResetpassScreen2 extends StatelessWidget {
-  ResetpassScreen2({super.key});
+ const ResetpassScreen2({super.key});
 
-  TextEditingController emailController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -17,7 +17,7 @@ class ResetpassScreen2 extends StatelessWidget {
       appBar: AppBar(),
       body: Center(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: size.width * .05),
+          padding: EdgeInsets.symmetric(horizontal: size.width * .05,vertical: size.height * .02),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -89,7 +89,7 @@ class ResetpassScreen2 extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: size.height / 4,
+                  height: size.height / 6,
                 ),
                 CustomAuthButton(
                     text: "Continue",

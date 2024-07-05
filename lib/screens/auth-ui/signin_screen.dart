@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:full_ecommerce/screens/auth-ui/creat_account.dart';
 import 'package:full_ecommerce/screens/auth-ui/resetpass_screen1.dart';
+import 'package:full_ecommerce/screens/navigation_page/home_screen.dart';
+import 'package:full_ecommerce/screens/navigation_page/navigation.dart';
 import 'package:full_ecommerce/widgets/custom_auth_button.dart';
 import 'package:full_ecommerce/widgets/form_heading_text.dart';
 import 'package:full_ecommerce/widgets/textformfield.dart';
@@ -117,9 +119,13 @@ class SignInScreen extends StatelessWidget {
                   SizedBox(
                     height: size.height * .06,
                   ),
-                  CustomAuthButton(text: "SignIn", ontap: () {}),
+                  CustomAuthButton(
+                      text: "SignIn",
+                      ontap: () {
+                        Get.to(NavigationBarPage());
+                      }),
                   SizedBox(
-                    height: size.height * .2,
+                    height: size.height * .15,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
