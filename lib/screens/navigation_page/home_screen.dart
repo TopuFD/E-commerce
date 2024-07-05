@@ -14,8 +14,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   TextEditingController catagoryController = TextEditingController();
 
-  var value = 5.0;
-
+  var value = 0.0;
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -58,10 +57,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: size.height * .02,
               ),
               CustomTextFormField(
-                hintText: 'Select Catagory',
-                controller: catagoryController,
-                suffixIcon: const Icon(Icons.keyboard_arrow_down),
-              ),
+                  hintText: 'Select Catagory',
+                  controller: catagoryController,
+                  suffixIcon: IconButton(
+                      onPressed: () {
+                        
+                      },
+                      icon:const Icon(Icons.keyboard_arrow_down))),
               SizedBox(
                 height: size.height * .05,
               ),
@@ -82,10 +84,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: size.height * .2,
                 child: Stack(children: [
                   Slider(
-                    min: 0.0,
-                    max: 90.0,
-                    divisions: 20,
-                    thumbColor:  const Color(0xFF4863a6),
+                      min: 0.0,
+                      max: 90.0,
+                      divisions: 20,
+                      thumbColor: const Color(0xFF4863a6),
                       value: value,
                       onChanged: (val) {
                         setState(() {
@@ -109,21 +111,21 @@ class _HomeScreenState extends State<HomeScreen> {
                                   topRight: Radius.circular(50.r))),
                         ),
                         Positioned(
-                          top: 20,
-                          left: 16,
+                            top: 20,
+                            left: 16,
                             child: Transform.rotate(
                               angle: 200.2,
                               child: Text(
-                              value.toStringAsFixed(0),
-                              style: TextStyle(
-                              color: const Color(0xFFFFFFFF),
-                              fontSize: 12.sp,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w500,
-                              height: 0.11,
-                              letterSpacing: 0.50,
-                                                      ),
-                                                    ),
+                                value.toStringAsFixed(0),
+                                style: TextStyle(
+                                  color: const Color(0xFFFFFFFF),
+                                  fontSize: 12.sp,
+                                  fontFamily: 'Roboto',
+                                  fontWeight: FontWeight.w500,
+                                  height: 0.11,
+                                  letterSpacing: 0.50,
+                                ),
+                              ),
                             ))
                       ]),
                     ),

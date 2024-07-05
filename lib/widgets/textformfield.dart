@@ -8,7 +8,7 @@ class CustomTextFormField extends StatelessWidget {
   final TextInputType keyboardType;
   final bool obscureText;
   final Icon? prefixIcon;
-  final Icon? suffixIcon;
+  final IconButton? suffixIcon;
 
   const CustomTextFormField({
     super.key,

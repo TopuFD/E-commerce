@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:full_ecommerce/screens/auth-ui/creat_account.dart';
 import 'package:full_ecommerce/screens/auth-ui/resetpass_screen1.dart';
-import 'package:full_ecommerce/screens/navigation_page/home_screen.dart';
 import 'package:full_ecommerce/screens/navigation_page/navigation.dart';
 import 'package:full_ecommerce/widgets/custom_auth_button.dart';
 import 'package:full_ecommerce/widgets/form_heading_text.dart';
@@ -122,7 +121,7 @@ class SignInScreen extends StatelessWidget {
                   CustomAuthButton(
                       text: "SignIn",
                       ontap: () {
-                        Get.to(NavigationBarPage());
+                        Get.to(const NavigationBarPage());
                       }),
                   SizedBox(
                     height: size.height * .15,
@@ -142,7 +141,7 @@ class SignInScreen extends StatelessWidget {
                       ),
                       InkWell(
                         onTap: () {
-                          Get.to(CreatAccountScreen());
+                          Get.to(const CreatAccountScreen());
                         },
                         child: Text(
                           "Sign Up",
