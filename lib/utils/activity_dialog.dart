@@ -7,7 +7,7 @@ class CustomDialog extends StatelessWidget {
   final String dialogDesce;
   final String firstButton;
   final String secondButton;
-  final VoidCallback OnTap;
+  final VoidCallback ontap;
   const CustomDialog(
       {super.key,
       required this.image,
@@ -16,7 +16,7 @@ class CustomDialog extends StatelessWidget {
       required this.firstButton,
       required this.secondButton,
       // ignore: non_constant_identifier_names
-      required this.OnTap});
+      required this.ontap});
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +59,7 @@ class CustomDialog extends StatelessWidget {
                   style: ButtonStyle(
                    overlayColor: WidgetStateProperty.all(const Color(0xFF5545A4),)
                   ),
-                    onPressed: OnTap,
+                    onPressed: ontap,
                     child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: size.width * .05),
                       child: Text(
@@ -78,7 +78,7 @@ class CustomDialog extends StatelessWidget {
                   style: ButtonStyle(
                    overlayColor: WidgetStateProperty.all(const Color(0xFF5545A4),)
                   ),
-                    onPressed: OnTap,
+                    onPressed: ontap,
                     child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: size.width * .05),
                       child: Text(

@@ -70,7 +70,7 @@ class ResetpassScreen1 extends StatelessWidget {
                 CustomAuthButton(
                     text: "Continue",
                     ontap: () {
-                      Get.to(ResetpassScreen2());
+                      Get.to(const ResetpassScreen2());
                     }),
               ],
             ),

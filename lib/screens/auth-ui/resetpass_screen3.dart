@@ -77,7 +77,7 @@ class ResetpassScreen3 extends StatelessWidget {
                   hintText: "New Password",
                   controller: newpassController,
                   prefixIcon: const Icon(Icons.email),
-                  suffixIcon: IconButton(onPressed: (){},icon: Icon(Icons.remove_red_eye),),
+                  suffixIcon: IconButton(onPressed: (){},icon: const Icon(Icons.remove_red_eye),),
                 ),
                 SizedBox(
                   height: size.height * .04,
@@ -92,7 +92,7 @@ class ResetpassScreen3 extends StatelessWidget {
                   hintText: "Confirm New Password",
                   controller: compassController,
                   prefixIcon: const Icon(Icons.email),
-                  suffixIcon: IconButton(onPressed: (){},icon: Icon(Icons.remove_red_eye),),
+                  suffixIcon: IconButton(onPressed: (){},icon: const Icon(Icons.remove_red_eye),),
                 ),
                 SizedBox(
                   height: size.height / 8,

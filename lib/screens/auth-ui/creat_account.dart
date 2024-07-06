@@ -52,8 +52,6 @@ class _CreateAccountScreenState extends State<CreatAccountScreen> {
       });
       var prefs = await SharedPreferences.getInstance();
       prefs.setString("imagePath", pickedFile.path);
-    } else {
-      print('No image selected.');
     }
   }
 
@@ -132,7 +130,7 @@ class _CreateAccountScreenState extends State<CreatAccountScreen> {
                               border: Border.all(
                                   color: Colors.white, width: size.width * .01),
                             ),
-                            child: Icon(
+                            child: const Icon(
                               Icons.edit,
                               color: Colors.white,
                             ),
@@ -286,6 +284,7 @@ class _CreateAccountScreenState extends State<CreatAccountScreen> {
                     IconButton(
                         onPressed: () async {
                           await _pickImage(ImageSource.camera);
+                          // ignore: use_build_context_synchronously
                           Navigator.pop(context);
                         },
                         icon: Icon(
@@ -297,6 +296,7 @@ class _CreateAccountScreenState extends State<CreatAccountScreen> {
                     IconButton(
                         onPressed: () async {
                           await _pickImage(ImageSource.gallery);
+                          // ignore: use_build_context_synchronously
                           Navigator.pop(context);
                         },
                         icon: Icon(

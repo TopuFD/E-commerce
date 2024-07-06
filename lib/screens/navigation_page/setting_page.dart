@@ -5,6 +5,6 @@ class SettingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text("Chat",style: TextStyle(color: Colors.red),),),);
+    return const Scaffold(body: Center(child: Text("Chat",style: TextStyle(color: Colors.red),),),);
   }
 }
