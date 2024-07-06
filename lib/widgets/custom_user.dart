@@ -16,7 +16,7 @@ class CustomUser extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: Get.height * 0.3,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
