@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:full_ecommerce/screens/other_screen/user_profile.dart';
 import 'package:full_ecommerce/widgets/custom_appbar.dart';
 import 'package:get/get.dart';
 
@@ -18,16 +19,15 @@ class ActivityChatt extends StatelessWidget {
               imagePath: "assets/images/active_person.png",
               title: "Limited Edition",
               subtitle: "105 People",
-              ontap: () {}),
+              ontap: () {
+                Get.to(const UserProfile());
+              }),
         ),
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: Get.width * .02),
         child: Column(
-          children: [
-            Expanded(child: _chatBody()),
-            _chattInput()
-          ],
+          children: [Expanded(child: _chatBody()), _chattInput()],
         ),
       ),
     );
@@ -44,8 +44,14 @@ class ActivityChatt extends StatelessWidget {
                 controller: controller,
                 decoration: InputDecoration(
                     border: InputBorder.none,
-                    suffixIcon: Transform.rotate(angle: -50.6,
-                    child: IconButton(onPressed: (){}, icon: const Icon(Icons.send,color: Color(0xFF5048A9),))),
+                    suffixIcon: Transform.rotate(
+                        angle: -50.6,
+                        child: IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.send,
+                              color: Color(0xFF5048A9),
+                            ))),
                     prefixIcon: IconButton(
                       onPressed: () {},
                       icon: const Icon(
@@ -58,15 +64,17 @@ class ActivityChatt extends StatelessWidget {
             ),
           ),
         ),
-        IconButton(onPressed: (){}, icon: const Icon(Icons.camera_alt))
+        IconButton(onPressed: () {}, icon: const Icon(Icons.camera_alt))
       ],
     );
   }
-    //chatting body =======================>
+
+  //chatting body =======================>
   Widget _chatBody() {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
-      child: const Center(child: Text("No Data Found"),)
-    );
+        margin: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
+        child: const Center(
+          child: Text("No Data Found"),
+        ));
   }
 }
