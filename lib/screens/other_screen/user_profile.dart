@@ -48,20 +48,27 @@ class UserProfile extends StatelessWidget {
                           letterSpacing: -0.23,
                         ),
                       ),
-                      trailing: ElevatedButton(
-                          style: ButtonStyle(
-                            backgroundColor: const WidgetStatePropertyAll(Color(0xFFFFEDED)),
-                              shape: WidgetStateProperty.all<
-                                  RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.r),
+                      trailing: SizedBox(
+                        height: 25,
+                        child: ElevatedButton(
+                            style: ButtonStyle(
+                                backgroundColor: const WidgetStatePropertyAll(Color(0xFFFFEDED),),
+                                
+                                padding: WidgetStateProperty.all(
+                                    const EdgeInsets.symmetric(horizontal: 0)),
+                                fixedSize:
+                                    WidgetStateProperty.all(const Size(60, 25)),
+                                shape: WidgetStateProperty.all<
+                                    RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.r),
+                                  ),
                                 ),
-                              ),
-                              overlayColor: WidgetStateProperty.all(
-                                const Color(0xFF5545A4),
-                              )),
-                          onPressed: () {
-                            showDialog(
+                                overlayColor: WidgetStateProperty.all(
+                                  const Color(0xFF5545A4),
+                                )),
+                            onPressed: () {
+                              showDialog(
                                   context: context,
                                   builder: (BuildContext context) {
                                     return CustomDialog(
@@ -75,18 +82,19 @@ class UserProfile extends StatelessWidget {
                                           Navigator.pop(context);
                                         });
                                   });
-                          },
-                          child: Text(
-                            "Remove",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: const Color(0xFFF36161),
-                              fontSize: 14.73.sp,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w500,
-                              height: 0.08,
-                            ),
-                          )),
+                            },
+                            child: Text(
+                              "Remove",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: const Color(0xFFF36161),
+                                fontSize: 12.sp,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500,
+                                height: 0.08,
+                              ),
+                            )),
+                      ),
                       leading: ClipRRect(
                         borderRadius: BorderRadius.circular(100),
                         child: Container(

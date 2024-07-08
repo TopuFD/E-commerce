@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:full_ecommerce/screens/other_screen/request_invite.dart';
 import 'package:full_ecommerce/screens/other_screen/user_profile.dart';
 import 'package:full_ecommerce/widgets/custom_appbar.dart';
 import 'package:get/get.dart';
@@ -19,9 +20,14 @@ class ActivityChatt extends StatelessWidget {
               imagePath: "assets/images/active_person.png",
               title: "Limited Edition",
               subtitle: "105 People",
-              ontap: () {
+              profileOntap: () {
+                
                 Get.to(const UserProfile());
-              }),
+              }, 
+              buttonOntap: () {
+                Get.to(const RequestInvitePage()); 
+
+               },),
         ),
       ),
       body: Padding(

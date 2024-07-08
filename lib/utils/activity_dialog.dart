@@ -23,7 +23,7 @@ class CustomDialog extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return AlertDialog(
       content: SizedBox(
-        height: size.height * .31,
+        height: size.height * .32,
         child: Column(
           children: [
             Image.asset(image),
@@ -51,7 +51,7 @@ class CustomDialog extends StatelessWidget {
                 height: 0.09,
               ),
             ),
-            SizedBox(height: size.height * .05,),
+            SizedBox(height: size.height * .04,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
