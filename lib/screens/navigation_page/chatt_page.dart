@@ -275,7 +275,7 @@ class _ChattPageState extends State<ChattPage> {
                             ),
                             subtitle: Row(
                               children: [
-                                const Icon(Icons.check),
+                                const Icon(Icons.done_all),
                                 Text(
                                   'Good bye!',
                                   style: TextStyle(
