@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:get/route_manager.dart';
 
 class CustomAppbar extends StatelessWidget {
   final String imagePath;
@@ -85,30 +86,41 @@ class CustomAppbar extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                width: Get.width * .03,
+                width: Get.width * .1,
               ),
-              ElevatedButton(
-                  style: ButtonStyle(
-                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.r),
+              SizedBox(
+                height: 25,
+                width: 80,
+                child: ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: const WidgetStatePropertyAll(Color(0xFFE2FFF1),),
+                      fixedSize: WidgetStateProperty.all(const Size(60, 25)),
+                      padding: WidgetStateProperty.all(
+                          const EdgeInsets.symmetric(horizontal: 0)),
+                        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.r),
+                          ),
+                        ),
+                        overlayColor: WidgetStateProperty.all(
+                          const Color(0xFF5545A4),
+                        )),
+                    onPressed: buttonOntap,
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: Get.width * .02),
+                      child: Text(
+                        "Requests",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: const Color(0xFF0FBC58),
+                          fontSize: 14.73.sp,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w500,
+                          height: 0.08,
                         ),
                       ),
-                      overlayColor: WidgetStateProperty.all(
-                        const Color(0xFF5545A4),
-                      )),
-                  onPressed: buttonOntap,
-                  child: Text(
-                    "Requests",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: const Color(0xFF010101),
-                      fontSize: 14.73.sp,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w500,
-                      height: 0.08,
-                    ),
-                  )),
+                    )),
+              ),
             ],
           ),
         )

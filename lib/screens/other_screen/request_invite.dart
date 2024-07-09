@@ -76,7 +76,7 @@ class RequestInvitePage extends StatelessWidget {
               ),
             ),
         ),
-        body: TabBarView(children: [
+        body: const TabBarView(children: [
           Request(),
           Invitation()
         ]),
