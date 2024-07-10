@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:full_ecommerce/screens/auth-ui/resetpass_screen2.dart';
+import 'package:full_ecommerce/app_route/route.dart';
 import 'package:full_ecommerce/widgets/custom_auth_button.dart';
 import 'package:full_ecommerce/widgets/form_heading_text.dart';
 import 'package:full_ecommerce/widgets/textformfield.dart';
@@ -18,7 +18,8 @@ class ResetpassScreen1 extends StatelessWidget {
       appBar: AppBar(),
       body: Center(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: size.width * .05,vertical:size.height * .02),
+          padding: EdgeInsets.symmetric(
+              horizontal: size.width * .05, vertical: size.height * .02),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -70,7 +71,7 @@ class ResetpassScreen1 extends StatelessWidget {
                 CustomAuthButton(
                     text: "Continue",
                     ontap: () {
-                      Get.to(const ResetpassScreen2());
+                      Get.toNamed(AppRoute.resetPassScreen2);
                     }),
               ],
             ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:full_ecommerce/screens/navigation_page/navigation.dart';
+import 'package:full_ecommerce/app_route/route.dart';
 import 'package:full_ecommerce/widgets/custom_auth_button.dart';
 import 'package:get/get.dart';
 
@@ -66,7 +66,7 @@ class ResetpassScreen4 extends StatelessWidget {
                 CustomAuthButton(
                     text: "Done",
                     ontap: () {
-                      Get.to(const NavigationBarPage());
+                      Get.toNamed(AppRoute.navigationBarPage);
                     }),
               ],
             ),

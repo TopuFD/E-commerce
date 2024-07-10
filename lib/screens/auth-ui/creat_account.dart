@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:full_ecommerce/screens/auth-ui/signin_screen.dart';
+import 'package:full_ecommerce/app_route/route.dart';
 import 'package:full_ecommerce/widgets/custom_auth_button.dart';
 import 'package:full_ecommerce/widgets/form_heading_text.dart';
 import 'package:full_ecommerce/widgets/textformfield.dart';
@@ -211,7 +211,11 @@ class _CreateAccountScreenState extends State<CreatAccountScreen> {
                 SizedBox(
                   height: size.height * .08,
                 ),
-                CustomAuthButton(text: "Sign In", ontap: () {}),
+                CustomAuthButton(
+                    text: "Create & Login",
+                    ontap: () {
+                      Get.toNamed(AppRoute.navigationBarPage);
+                    }),
                 SizedBox(
                   height: size.height * .05,
                 ),
@@ -230,7 +234,7 @@ class _CreateAccountScreenState extends State<CreatAccountScreen> {
                     ),
                     InkWell(
                       onTap: () {
-                        Get.to(SignInScreen());
+                        Get.toNamed(AppRoute.signInScreen);
                       },
                       child: Text(
                         "Sign Up",

@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:full_ecommerce/screens/auth-ui/resetpass_screen3.dart';
+import 'package:full_ecommerce/app_route/route.dart';
 import 'package:full_ecommerce/widgets/custom_auth_button.dart';
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 // ignore: must_be_immutable
 class ResetpassScreen2 extends StatelessWidget {
- const ResetpassScreen2({super.key});
-
+  const ResetpassScreen2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +16,8 @@ class ResetpassScreen2 extends StatelessWidget {
       appBar: AppBar(),
       body: Center(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: size.width * .05,vertical: size.height * .02),
+          padding: EdgeInsets.symmetric(
+              horizontal: size.width * .05, vertical: size.height * .02),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -94,7 +94,7 @@ class ResetpassScreen2 extends StatelessWidget {
                 CustomAuthButton(
                     text: "Continue",
                     ontap: () {
-                      Get.to(ResetpassScreen3());
+                      Get.toNamed(AppRoute.resetPassScreen3);
                     }),
               ],
             ),

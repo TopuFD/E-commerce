@@ -47,7 +47,7 @@ class RequestUser extends StatelessWidget {
           ),
         ),
         TextSpan(
-          text: "City, State",
+          text: " City, State",
           style: TextStyle(
             color: const Color(0xFF848484),
             fontSize: 12.sp,

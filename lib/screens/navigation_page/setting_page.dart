@@ -1,8 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:full_ecommerce/screens/other_screen/user_profile.dart';
+import 'package:full_ecommerce/app_route/route.dart';
 import 'package:get/get.dart';
 
 class SettingPage extends StatelessWidget {
@@ -41,8 +40,7 @@ class SettingPage extends StatelessWidget {
                     width: Get.width * 0.21,
                     child: Image.asset(
                       "assets/images/setting_img.png",
-                      height:
-                          Get.height * 0.1,
+                      height: Get.height * 0.1,
                       width: Get.width * 0.11,
                       fit: BoxFit.cover,
                     ),
@@ -74,8 +72,8 @@ class SettingPage extends StatelessWidget {
                     height: 0.11,
                   ),
                 ),
-                SizedBox(height:Get.height * .02),
-                
+                SizedBox(height: Get.height * .02),
+
                 // account section is starting form here===========================>
                 Align(
                   alignment: Alignment.topLeft,
@@ -140,29 +138,34 @@ class SettingPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      ListTile(
-                        leading: const Icon(
-                          Icons.notifications,
-                          color: Color(0xFF8B8B8B),
-                        ),
-                        trailing: const Icon(
-                          Icons.arrow_forward_ios_outlined,
-                          color: Color(0xFF8B8B8B),
-                        ),
-                        title: Text(
-                          'Notification',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 12.sp,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w500,
-                            height: 0,
+                      InkWell(
+                        onTap: () {
+                          Get.toNamed(AppRoute.notificationScreen);
+                        },
+                        child: ListTile(
+                          leading: const Icon(
+                            Icons.notifications,
+                            color: Color(0xFF8B8B8B),
+                          ),
+                          trailing: const Icon(
+                            Icons.arrow_forward_ios_outlined,
+                            color: Color(0xFF8B8B8B),
+                          ),
+                          title: Text(
+                            'Notification',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 12.sp,
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w500,
+                              height: 0,
+                            ),
                           ),
                         ),
                       ),
                       InkWell(
                         onTap: () {
-                          Get.to(const UserProfile());
+                          Get.toNamed(AppRoute.userProfile);
                         },
                         child: ListTile(
                           leading: const Icon(
@@ -188,7 +191,7 @@ class SettingPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                
+
                 // general section is starting form here============
                 Align(
                   alignment: Alignment.topLeft,
@@ -275,11 +278,11 @@ class SettingPage extends StatelessWidget {
                       ),
                       InkWell(
                         onTap: () {
-                          Get.to(const UserProfile());
+                          Get.toNamed(AppRoute.signInScreen);
                         },
-                        
                         child: ListTile(
-                          leading:const Icon(Icons.logout,color: Color(0xFF8B8B8B)),
+                          leading: const Icon(Icons.logout,
+                              color: Color(0xFF8B8B8B)),
                           title: Text(
                             'Logout',
                             style: TextStyle(

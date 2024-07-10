@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:full_ecommerce/app_route/route.dart';
 import 'package:full_ecommerce/widgets/custom_auth_button.dart';
 import 'package:full_ecommerce/widgets/textformfield.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -26,7 +28,11 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         centerTitle: true,
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.notifications))
+          IconButton(
+              onPressed: () {
+                Get.toNamed(AppRoute.notificationScreen);
+              },
+              icon: const Icon(Icons.notifications))
         ],
       ),
       body: SingleChildScrollView(
@@ -59,10 +65,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   hintText: 'Select Catagory',
                   controller: catagoryController,
                   suffixIcon: IconButton(
-                      onPressed: () {
-                        
-                      },
-                      icon:const Icon(Icons.keyboard_arrow_down))),
+                      onPressed: () {},
+                      icon: const Icon(Icons.keyboard_arrow_down))),
               SizedBox(
                 height: size.height * .05,
               ),

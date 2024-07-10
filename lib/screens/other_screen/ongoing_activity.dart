@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:full_ecommerce/screens/other_screen/activity_chatt.dart';
+import 'package:full_ecommerce/app_route/route.dart';
 import 'package:full_ecommerce/utils/activity_dialog.dart';
 import 'package:get/get.dart';
 
@@ -18,7 +18,7 @@ class OngoingActivity extends StatelessWidget {
           return Padding(
             padding: const EdgeInsets.all(8.0),
             child: InkWell(
-              onTap: () => Get.to(ActivityChatt()),
+              onTap: () => Get.toNamed(AppRoute.activityChatt),
               child: Card(
                 color: const Color(0x3FE3E0FF),
                 elevation: 1,

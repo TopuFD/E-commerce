@@ -1,7 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:full_ecommerce/screens/other_screen/activity_chatt.dart';
+import 'package:full_ecommerce/app_route/route.dart';
 import 'package:get/get.dart';
 
 class ChattPage extends StatefulWidget {
@@ -93,7 +92,7 @@ class _ChattPageState extends State<ChattPage> {
                     secondaryBackground: Container(
                       color: Colors.red,
                       child: const Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Padding(
                             padding: EdgeInsets.only(left: 16.0),
@@ -109,7 +108,7 @@ class _ChattPageState extends State<ChattPage> {
                       children: [
                         InkWell(
                           onTap: () {
-                            Get.to(ActivityChatt());
+                            Get.toNamed(AppRoute.activityChatt);
                           },
                           child: ListTile(
                             title: Text(
