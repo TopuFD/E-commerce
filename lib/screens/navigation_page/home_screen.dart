@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:full_ecommerce/widgets/custom_auth_button.dart';
 import 'package:full_ecommerce/widgets/textformfield.dart';
 
-// ignore: must_be_immutable
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 

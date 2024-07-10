@@ -20,7 +20,8 @@ class OngoingActivity extends StatelessWidget {
             child: InkWell(
               onTap: () => Get.to(ActivityChatt()),
               child: Card(
-                elevation: 5,
+                color: const Color(0x3FE3E0FF),
+                elevation: 1,
                 child: Column(
                   children: [
                     Row(
@@ -53,7 +54,8 @@ class OngoingActivity extends StatelessWidget {
                             ),
                             subtitle: Row(
                               children: [
-                                const Icon(Icons.location_on_rounded),
+                                const Icon(Icons.location_on_rounded,
+                                color:  Color(0xFF99A7C6),),
                                 Text(
                                   'USA',
                                   style: TextStyle(
@@ -87,7 +89,7 @@ class OngoingActivity extends StatelessWidget {
                             },
                             icon: const Icon(
                               Icons.delete,
-                              color: Colors.red,
+                              color: Color(0xFFFF5F5F),
                             ))
                       ],
                     ),
@@ -120,7 +122,7 @@ class OngoingActivity extends StatelessWidget {
   Widget cardButton(Icon icon, String text) {
     return Container(
       decoration: BoxDecoration(
-          color: const Color(0xB39E9E9E),
+          color: const Color(0xCCE3E0FF),
           borderRadius: BorderRadius.circular(10.r)),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),

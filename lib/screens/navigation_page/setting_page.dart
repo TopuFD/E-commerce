@@ -75,7 +75,8 @@ class SettingPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height:Get.height * .02),
-                // account section is starting form here============
+                
+                // account section is starting form here===========================>
                 Align(
                   alignment: Alignment.topLeft,
                   child: Padding(

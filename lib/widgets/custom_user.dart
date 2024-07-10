@@ -29,13 +29,13 @@ class CustomUser extends StatelessWidget {
               width: Get.width * 0.28,
               child: Image.asset(
                 imagePath,
-                height: Get.height * 0.1, // Adjust the image height as needed
-                width: Get.width * 0.11, // Take full width of the column
-                fit: BoxFit.cover, // Ensure the image covers the space
+                height: Get.height * 0.1,
+                width: Get.width * 0.11,
+                fit: BoxFit.cover,
               ),
             ),
           ),
-          SizedBox(height: 10.h), // Add spacing between image and text
+          SizedBox(height: 10.h),
           Text(
             title,
             style: TextStyle(
@@ -43,10 +43,10 @@ class CustomUser extends StatelessWidget {
               fontSize: 20.sp,
               fontFamily: 'Poppins',
               fontWeight: FontWeight.w500,
-              height: 1.4, // Adjusted line height for better readability
+              height: 1.4,
             ),
           ),
-          SizedBox(height: Get.height * .001), // Add spacing between title and description
+          SizedBox(height: Get.height * .001),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -58,7 +58,7 @@ class CustomUser extends StatelessWidget {
                   fontSize: 12.sp,
                   fontFamily: 'Poppins',
                   fontWeight: FontWeight.w500,
-                  height: 1.4, // Adjusted line height for better readability
+                  height: 1.4,
                 ),
               ),
             ],
@@ -88,7 +88,7 @@ class CustomUser extends StatelessWidget {
       child: Row(
         children: [
           icon,
-          SizedBox(width: 5.w), // Adjust spacing between icon and text
+          SizedBox(width: 5.w),
           Text(
             text,
             style: TextStyle(
