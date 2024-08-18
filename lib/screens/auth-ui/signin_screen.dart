@@ -85,7 +85,7 @@ class SignInScreen extends StatelessWidget {
                         ),
                         CustomTextFormField(
                           hintText: "Password",
-                          controller: emailController,
+                          controller: passController,
                           prefixIcon: const Icon(Icons.email),
                         ),
                         SizedBox(
